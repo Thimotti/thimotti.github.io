@@ -6,7 +6,7 @@
     <description>Recent content in Posts on David Thimotti</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt</language>
-    <lastBuildDate>Tue, 16 Jul 2019 23:19:10 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jul 2019 11:09:10 -0300</lastBuildDate>
     
 	<atom:link href="https://thimotti.github.io/pt/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,11 @@
     <item>
       <title>Primeiro Post</title>
       <link>https://thimotti.github.io/pt/posts/my-first-post/</link>
-      <pubDate>Tue, 16 Jul 2019 23:19:10 -0300</pubDate>
+      <pubDate>Thu, 18 Jul 2019 11:09:10 -0300</pubDate>
       
       <guid>https://thimotti.github.io/pt/posts/my-first-post/</guid>
-      <description> Olá mundo!!! </description>
+      <description>Qual o plano ??? A ideia por trás deste blog é ter um local para documentar meus estudos e, ao mesmo tempo, colocar em prática o que tenho estudado. Irei utilizar o princípio KISS neste projeto, valorizando a simplicidade do projeto e descartando toda e qualquer complexidade desnecessária. KISS é o acrônimo em inglês de Keep It Simple, Stupid.
+HUGO HUGO é um framework para construção de sites estáticos de código aberto.</description>
     </item>
     
   </channel>
