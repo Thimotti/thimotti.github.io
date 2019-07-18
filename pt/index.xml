@@ -21,21 +21,25 @@
     </item>
     
     <item>
-      <title>Contact</title>
+      <title>Contato</title>
       <link>https://thimotti.github.io/pt/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thimotti.github.io/pt/contact/</guid>
-      <description>Quer entrar em contato? Tem perguntas? Pergunte-me no Twitter.</description>
+      <description>Quer entrar em contato? Tem perguntas? Pergunte-me no Twitter.
+Minhas redes sociais Facebook Instagram</description>
     </item>
     
     <item>
-      <title>Projects</title>
+      <title>Projetos</title>
       <link>https://thimotti.github.io/pt/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thimotti.github.io/pt/projects/</guid>
-      <description> Portfolio Demo  Coder Portfolio Este tema é criado com base no hugo-coder.
+      <description> Website pessoal  Blog Site desenvolvido em Hugo, framework para construnção de websites estáticos, utilizando o tema Coder Portfolio.
+Versão Hugo: v0.55.4-57900417 linux/amd64
+Licença: MIT
+Repositório: GitHub
    </description>
     </item>
     
@@ -45,8 +49,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thimotti.github.io/pt/about/</guid>
-      <description>Meu nome é David Thimotti e moro em Belo Horizonte, Brasil. Atualmente, estou trabalhando como analista de suporte de redes na Alika Soluções. Sou tecnologo em redes de computadores pelo Centro Universitário Estácio de Belo Horizonte, e especialização em telecomunicações e redes de computadores pelo Centro Universitário Estácio de Belo Horizonte.
-Estou interessado em engenharia de software em geral: estruturas de dados, algoritmos, protocolos, arquitetura, padrões de design e muito mais.</description>
+      <description>Meu nome é David Thimotti e moro em Belo Horizonte, Brasil. Atualmente, estou trabalhando como analista na Alika Soluções. Sou tecnólogo em redes de computadores, com especialização em telecomunicações e redes de computadores pelo Centro Universitário Estácio de Belo Horizonte.
+Estou interessado em engenharia de software em geral: estruturas de dados, algoritmos, protocolos, arquitetura, padrões de design e muito mais. Além disso, trabalho com redes de computadores corporativas. Recentemente, comecei a me envolver mais na comunidade de código aberto, participando de encontros e conferências e, claro, contribuindo.</description>
     </item>
     
   </channel>
