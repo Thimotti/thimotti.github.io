@@ -11,22 +11,22 @@
     
     <meta property="og:site_name" content="David Thimotti">
     <meta property="og:title" content="
-  Primeiro Post - David Thimotti
+  Open Source - David Thimotti
 ">
-    <meta property="og:description" content="Primeiro post explicando o plano de criação do blog.">
+    <meta property="og:description" content="Post explicando o porque do Open Source.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://thimotti.github.io/pt/posts/my-first-post/">
+    <meta property="og:url" content="https://thimotti.github.io/pt/posts/open-source/">
     <meta property="og:image" content="https://thimotti.github.ioimages/tn.png">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="https://thimotti.github.io/pt/posts/my-first-post/">
+    <meta name="twitter:site" content="https://thimotti.github.io/pt/posts/open-source/">
     <meta name="twitter:image" content="https://thimotti.github.ioimages/tn.png">
 
-    <base href="https://thimotti.github.io/pt/posts/my-first-post/">
+    <base href="https://thimotti.github.io/pt/posts/open-source/">
     <title>
-  Primeiro Post - David Thimotti
+  Open Source - David Thimotti
 </title>
 
-    <link rel="canonical" href="https://thimotti.github.io/pt/posts/my-first-post/">
+    <link rel="canonical" href="https://thimotti.github.io/pt/posts/open-source/">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     
@@ -114,8 +114,8 @@
   <section class="container post">
   <article>
     <header>
-      <h1 class="title">Primeiro Post</h1>
-      <h2 class="date">July 18, 2019</h2>
+      <h1 class="title">Open Source</h1>
+      <h2 class="date">July 23, 2019</h2>
 
       
         <script type="text/javascript" async
@@ -147,35 +147,53 @@
 
 <hr />
 
-<h1 id="qual-o-plano">Qual o plano ???</h1>
+<h1 id="open-source">Open Source</h1>
 
-<p>A ideia por trás deste blog é ter um local para documentar meus estudos e, ao mesmo tempo, colocar em prática  o que tenho estudado. Irei utilizar o princípio KISS neste projeto, valorizando a simplicidade do projeto e descartando toda e qualquer complexidade desnecessária. KISS é o acrônimo em inglês de <a href="https://pt.wikipedia.org/wiki/Princ%C3%ADpio_KISS">Keep It Simple, Stupid</a>.</p>
+<p>Como escrevi na sessão “Sobre mim”, comecei a me envolver mais na comunidade Open Source. Quero documentar meus estudos em programação e tecnologia em geral, mantendo o princípio KISS, por isso escolhi o Open Source. Não quero entrar na discussão “Free Software Foundation X Open Source Initiative”, pois não é o caso. A ideia é utilizar o modelo Open Source, simplesmente, porque é fácil e atende meus objetivos.
+Meu objetivo é documentar meus estudos, todavia o Open Source é um ótimo instrumento para mostrar o meu trabalho. Recomendo que todos leiam o <a href="https://opensource.guide/">Open Source Guides</a>. Este guia está sendo minha fonte de expiração.</p>
 
-<h2 id="hugo">HUGO</h2>
+<h2 id="documentar">Documentar</h2>
 
-<p><a href="https://gohugo.io/">HUGO</a> é um framework para construção de sites estáticos de código aberto. Como a ideia é manter a simplicidade, não vejo algo mais simples que um site estático. Há muitos motivos por ter escolhido este framework: código aberto, flexível, rápido, simples e seguro.</p>
+<p>Existe muito material na internet que fala sobe a importância da documentação em projetos, então vamos começar certo. Conforme o nosso guia, todo projeto deve incluir as seguintes documentações:</p>
 
-<p>Não tenho nada contra outros Frameworks web e/ou CMS existente, inclusive utilizo e estudo. Como exemplo tenho o site da <a href="https://alika.net.br/">Alika Soluções</a>, onde utilizo <a href="https://www.joomla.org/">Joomla</a> e o <a href="https://www.djangoproject.com/">Django</a> que é um framework para desenvolvimento rápido para web, escrito em Python, que utiliza o padrão model-template-view. Tenho estudado Python, irei tratar em outro post o motivo de estar estudando Python.</p>
+<ul>
+<li>Open source license</li>
+<li>README</li>
+<li>Contributing guidelines</li>
+<li>Code of conduct</li>
+</ul>
 
-<p>Mas a ideia aqui é simplicidade, se o site não precisa de transações em um banco de dados para orientar o conteúdo que os visitantes veem de maneira dinâmica, por que irei adicionar a sobrecarga de um CMS? Decidi colocar o da peso da segurança e desempenho superior de um site estático como requisito deste projeto.</p>
+<p>O GitHub, facilita muito este processo, pois é necessário somente salvar esses arquivos no diretório root com os nomes recomendados, que o GitHub irá reconhecê-los e automaticamente mostrá-los da maneira apropriada.</p>
 
-<p>Outro fator importante é o fato do HUGO permitir configurar o site para atender aos novos regulamentos de Proteção de Dados. Temos a <a href="http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm">Lei Geral de Proteção de Dados Pessoais (LGPD)</a>. Arquivos HTML estáticos são muito mais fáceis de se avaliar do que os sites orientados a servidores e bancos de dados. Mas mesmo sites estáticos podem se integrar a serviços externos. O HUGO, a partir da versão 0.41, fornece o Privacy Config que abrange os modelos internos relevantes.</p>
+<h3 id="license">LICENSE</h3>
 
-<p>Consulte <a href="https://gohugo.io/about/hugo-and-gdpr/">Hugo and the General Data Protection Regulation (GDPR)</a> para maiores informações e configurações de privacidade disponíveis.</p>
+<p><em>“Todo projeto open source deve ter uma licença open source. Se o projeto não tiver uma licença, não é open source.”</em>
+Esta afirmativa do nosso guia, nos faz escolher uma licença para o nosso projeto. Quero tratar em post a parte o assunto licença, no site <a href="https://choosealicense.com/">https://choosealicense.com/</a>, há um ótimo material de referencia. Neste projeto irei utilizar a licença MIT, ela é curta e simples. Não posso esquecer do KISS.
+O GitHub se encarrega de criar o arquivo de licença, quando se inicia um novo repositório, sendo necessário somente escolher o modelo.</p>
 
-<h2 id="disqus">Disqus</h2>
+<p><img src="https://opensource.guide/assets/images/starting-a-project/repository-license-picker.png" alt="Repository license picker" /></p>
 
-<p><a href="https://disqus.com/">Disqus</a> é uma plataforma centralizada de discussões e postagem de comentários, isso aqui é um blog e todos os comentários são bem vindos. O Disqus suporta integração com Facebook, Twitter e outras redes sociais, em 2010 ultrapassou 13 milhões de usuários registrados em mais de 500 mil comunidades. Então acho que esta é a maneira mais fácil, rápida e simples de centralizar todas as discussões e comentários.</p>
+<p>Não há desculpas para não adicionar uma licença ao projeto.</p>
 
-<h2 id="github">GitHub</h2>
+<h3 id="readme">README</h3>
 
-<p><a href="https://github.com/">GitHub</a> é a plataforma de hospedagem de código-fonte com controle de versão mais utilizada no mundo. Não vou reinventar a roda. Todos os meus códigos estarão disponíveis no GitHub.</p>
+<p>Explicar um projeto não é algo tão simples, vou usar uma frase do Albert Einstein, para criação dos meus arquivos README, “fazer da forma mais simples possível, mas não mais simples que isso”.
+Fontes de inspiração, <a href="https://github.com/18F/open-source-guide">Making READMEs Readable</a> do @18F ou o <a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2">README template do @PurpleBooth</a>.</p>
 
-<p>Nos próximos posts irei descrever o procedimento que utilizei para colocar o Blog no ar. Vou tratar desde a instalação e configuração do HUGO à automatização com o GitHub para publicação de novos conteudos.</p>
+<h3 id="contributing">CONTRIBUTING</h3>
+
+<p>Quero fazer um projeto acolhedor a novas contribuições. Toda e qualquer contribuição será bem vinda. Nunca escrevi um arquivo CONTRIBUTING, vou usar como referência o <a href="https://github.com/nayafia/contributing-template/blob/master/CONTRIBUTING-template.md">contributing guide template</a> de @nayafia e o <a href="https://mozillascience.github.io/working-open-workshop/contributing/">How to Build a CONTRIBUTING.md</a> do @mozilla.</p>
+
+<h3 id="code-of-conduct">CODE_OF_CONDUCT</h3>
+
+<p>Toda contribuição sempre será bem, mas iremos ter regras básicas para o comportamento dos participantes e queremos manter o ambiente amigável e acolhedor. Nosso guia será o <a href="https://opensource.guide/code-of-conduct/">Code of Conduct guide</a>.</p>
 
 <hr />
 
-<p>Obrigado por ler!</p>
+<p><em>Então é isso, vou colocar a mão na massa.</em></p>
+
+<p>Verifique meus projetos no <a href="https://github.com/thimotti">Github</a>.
+Obrigado por ler!</p>
 
   </article>
 
@@ -212,8 +230,8 @@
   <section class="container">
     
       <div class="sns-shares sp-sns-shares">
-        <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fmy-first-post%2f&ref_src=twsrc%5Etfw&text=Primeiro%20Post David%20Thimotti&tw_p=tweetbutton&url=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fmy-first-post%2f"><i class="fab fa-twitter"></i></a>
-        <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fmy-first-post%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
+        <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fopen-source%2f&ref_src=twsrc%5Etfw&text=Open%20Source David%20Thimotti&tw_p=tweetbutton&url=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fopen-source%2f"><i class="fab fa-twitter"></i></a>
+        <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fopen-source%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
       </div>
     
     
@@ -228,8 +246,8 @@
     
     
       <div class="sns-shares pc-sns-shares">
-        <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fmy-first-post%2f&ref_src=twsrc%5Etfw&text=Primeiro%20Post David%20Thimotti&tw_p=tweetbutton&url=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fmy-first-post%2f"><i class="fab fa-twitter"></i></a>
-        <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fmy-first-post%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
+        <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fopen-source%2f&ref_src=twsrc%5Etfw&text=Open%20Source David%20Thimotti&tw_p=tweetbutton&url=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fopen-source%2f"><i class="fab fa-twitter"></i></a>
+        <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=https%3a%2f%2fthimotti.github.io%2fpt%2fposts%2fopen-source%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
        </div>
     
   </section>

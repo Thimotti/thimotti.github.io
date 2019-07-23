@@ -6,10 +6,19 @@
     <description>Recent content on David Thimotti</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt</language>
-    <lastBuildDate>Thu, 18 Jul 2019 11:09:10 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2019 10:18:54 -0300</lastBuildDate>
     
 	<atom:link href="https://thimotti.github.io/pt/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Open Source</title>
+      <link>https://thimotti.github.io/pt/posts/open-source/</link>
+      <pubDate>Tue, 23 Jul 2019 10:18:54 -0300</pubDate>
+      
+      <guid>https://thimotti.github.io/pt/posts/open-source/</guid>
+      <description>Open Source Como escrevi na sessão “Sobre mim”, comecei a me envolver mais na comunidade Open Source. Quero documentar meus estudos em programação e tecnologia em geral, mantendo o princípio KISS, por isso escolhi o Open Source. Não quero entrar na discussão “Free Software Foundation X Open Source Initiative”, pois não é o caso. A ideia é utilizar o modelo Open Source, simplesmente, porque é fácil e atende meus objetivos.</description>
+    </item>
     
     <item>
       <title>Primeiro Post</title>

@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://thimotti.github.io/pt/</loc>
-    <lastmod>2019-07-18T11:09:10-03:00</lastmod>
+    <lastmod>2019-07-23T10:18:54-03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -19,8 +19,23 @@
   </url>
   
   <url>
+    <loc>https://thimotti.github.io/pt/posts/open-source/</loc>
+    <lastmod>2019-07-23T10:18:54-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://thimotti.github.io/posts/open-source/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://thimotti.github.io/pt/posts/open-source/"
+                />
+  </url>
+  
+  <url>
     <loc>https://thimotti.github.io/pt/posts/</loc>
-    <lastmod>2019-07-18T11:09:10-03:00</lastmod>
+    <lastmod>2019-07-23T10:18:54-03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"

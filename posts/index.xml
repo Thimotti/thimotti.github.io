@@ -6,10 +6,27 @@
     <description>Recent content in Posts on David Thimotti</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Jul 2019 11:09:10 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2019 10:18:24 -0300</lastBuildDate>
     
 	<atom:link href="https://thimotti.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Open Source</title>
+      <link>https://thimotti.github.io/posts/open-source/</link>
+      <pubDate>Tue, 23 Jul 2019 10:18:24 -0300</pubDate>
+      
+      <guid>https://thimotti.github.io/posts/open-source/</guid>
+      <description>Open Source Open Source Guides
+To document  Open source license README Contributing guidelines Code of conduct  LICENSE Choose an open source license
+README Making READMEs Readable
+README template @PurpleBooth
+CONTRIBUTING Contributing guide template
+How to Build a CONTRIBUTING.md
+CODE_OF_CONDUCT Code of Conduct guide
+Check out my projects at Github.
+Thanks for reading!</description>
+    </item>
     
     <item>
       <title>First Post	</title>
