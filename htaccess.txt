@@ -1,0 +1,171 @@
+# ============================================
+# CONFIGURAÇÃO DE SEGURANÇA AVANÇADA
+# thimotti.eu.org - .htaccess
+# Versão corrigida - Sem erro 500
+# ============================================
+
+# 1. ATIVAÇÃO DO REWRITE ENGINE
+RewriteEngine On
+
+# 2. REDIRECIONAMENTO HTTP → HTTPS (301 permanente)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# 3. PREVENÇÃO DE LISTAGEM DE DIRETÓRIOS
+Options -Indexes -Includes -ExecCGI +FollowSymLinks
+
+# 4. PÁGINA PADRÃO
+DirectoryIndex index.html index.php
+
+# 5. PROTEÇÃO DE ARQUIVOS SENSÍVEIS
+<FilesMatch "^(\.(htaccess|htpasswd|env|git|svn)|config\.(php|js|json)|composer\.(json|lock)|package\.json|yarn\.lock|web\.config|wp-config\.php|robots\.txt)$">
+    Require all denied
+</FilesMatch>
+
+# 6. BLOQUEIO DE ARQUIVOS OCULTOS (iniciados com ponto)
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# 7. LIMITE DE TAMANHO DE UPLOAD (10MB máximo)
+LimitRequestBody 10485760
+
+# 8. BLOQUEIO DE USER AGENTS MALICIOSOS
+<IfModule mod_setenvif.c>
+    SetEnvIfNoCase User-Agent ".*(sqlmap|nikto|w3af|acunetix|nessus|openvas|metasploit|hydra|medusa|wget|curl|scan|bot|crawler|spider|harvest|accumulator|sucker|leech|strip|mirror|index|fetch|extract|httrack|webalizer|libwww-perl|python-requests).*" bad_bot
+    SetEnvIfNoCase User-Agent "^$" bad_bot
+    Deny from env=bad_bot
+</IfModule>
+
+# 9. PROTEÇÃO CONTRA HOTLINK (uso indevido de imagens)
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?thimotti\.eu\.org/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?localhost/.*$ [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp|bmp|svg|ico|css|js)$ - [NC,F,L]
+
+# 10. COMPRESSÃO GZIP PARA PERFORMANCE (se módulo disponível)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml application/rss+xml image/svg+xml
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    Header append Vary User-Agent
+</IfModule>
+
+# 11. CABEÇALHOS DE SEGURANÇA HTTP
+<IfModule mod_headers.c>
+    # ============================================
+    # A. CABEÇALHOS BÁSICOS DE SEGURANÇA
+    # ============================================
+
+    # Proteção contra clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Prevenção de MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Proteção contra XSS (para navegadores antigos)
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # ============================================
+    # B. POLÍTICAS MODERNAS DE PRIVACIDADE
+    # ============================================
+
+    # Permissions Policy - Controle de APIs do navegador
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), interest-cohort=(), accelerometer=(), autoplay=(), encrypted-media=(), fullscreen=(), gyroscope=(), magnetometer=(), midi=(), picture-in-picture=(), sync-xhr=(), usb=()"
+
+    # Referrer Policy - Controle de informação de referência
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # ============================================
+    # C. CONTENT SECURITY POLICY (MODO REPORT-ONLY)
+    # ============================================
+
+    # POLÍTICA DE SEGURANÇA DE CONTEÚDO
+    Header set Content-Security-Policy "default-src 'self'; \
+    script-src 'self' https://cdn.jsdelivr.net https://cdn.credly.com; \
+    style-src 'self' https://cdnjs.cloudflare.com; \
+    img-src 'self' https://flagcdn.com https://cdnjs.cloudflare.com data:; \
+    font-src https://cdnjs.cloudflare.com; \
+    frame-src https://www.credly.com; \
+    connect-src 'self'; \
+    object-src 'none'; \
+    base-uri 'self'; \
+    form-action 'self';"
+
+    # ============================================
+    # D. CONTROLE DE CACHE SEGURO
+    # ============================================
+
+    # Para arquivos estáticos (cache longo)
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|ico|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+        Header unset Pragma
+        Header unset ETag
+        FileETag None
+    </FilesMatch>
+
+    # Para páginas HTML/PHP (não cachear)
+    <FilesMatch "\.(php|html|htm)$">
+        Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "Thu, 01 Jan 1970 00:00:00 GMT"
+    </FilesMatch>
+
+    # ============================================
+    # E. HSTS (HTTP STRICT TRANSPORT SECURITY)
+    # ============================================
+    # Mantido conforme sua solicitação com preload
+    <If "%{HTTPS} == 'on'">
+        Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    </If>
+
+    # ============================================
+    # F. CABEÇALHOS ADICIONAIS DE SEGURANÇA
+    # ============================================
+
+    # Remove cabeçalhos sensíveis do servidor
+    Header unset X-Powered-By
+    Header always unset X-Powered-By
+    Header unset Server
+    Header always unset Server
+
+    # Prevenir detecção de MIME type incorrecta
+    Header always set X-Download-Options "noopen"
+
+    # Proteção contra ataques de reflexão de cliques
+    Header always set X-Permitted-Cross-Domain-Policies "none"
+</IfModule>
+
+# 12. PÁGINAS DE ERRO PERSONALIZADAS (opcional)
+# ErrorDocument 400 /error.html
+# ErrorDocument 401 /error.html
+# ErrorDocument 403 /error.html
+# ErrorDocument 404 /error.html
+# ErrorDocument 500 /error.html
+
+# 13. CONFIGURAÇÃO DE CHARSET
+AddDefaultCharset UTF-8
+
+# 14. PROTEÇÃO CONTRA INJECTION DE ARQUIVOS
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType text/css .css
+    AddType image/svg+xml .svg
+    AddType image/x-icon .ico
+    AddType application/x-font-woff .woff
+    AddType application/x-font-woff2 .woff2
+    AddType application/x-font-ttf .ttf
+</IfModule>
+
+# 15. VALIDAÇÃO DE REQUESTS (simplificado para evitar erros)
+<IfModule mod_rewrite.c>
+    # Proteção contra directory traversal
+    RewriteCond %{REQUEST_URI} (\.\./|\.\.\\|\.\.) [NC,OR]
+    RewriteCond %{REQUEST_URI} (\.php\.bak|\.sql|\.log) [NC]
+    RewriteRule ^(.*)$ - [F,L]
+</IfModule>
+
+# ============================================
+# FIM DO ARQUIVO .HTACCESS
+# ============================================
